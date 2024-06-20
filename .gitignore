@@ -1,0 +1,10 @@
+.env
+logs/
+plugins/
+config/
+venv/
+__pycache__/
+*.pyc
+.dockerignore
+docker-compose-dev.yml
+sources/
