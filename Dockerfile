@@ -1,3 +1,4 @@
+# Ponerle una version mas actualizada de airflow
 FROM apache/airflow:2.6.2
 
 USER root
