@@ -1,10 +1,12 @@
 # Ponerle una version mas actualizada de airflow
-FROM apache/airflow:2.6.2
+FROM apache/airflow:2.9.2
 
 USER root
 
 # Update and install required packages
 RUN apt-get update && \
+    apt-get install -y --no-install-recommends ca-certificates && \
+    update-ca-certificates \
     apt-get install -y --no-install-recommends \
     openjdk-11-jdk \
     ant && \
@@ -13,14 +15,13 @@ RUN apt-get update && \
 # Set JAVA_HOME
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
+# le doy mi usuario de la variable de entorno del web-server
 USER airflow
-
-# Install Apache Spark provider
-RUN pip install apache-airflow-providers-apache-spark
 
 # Copy and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade azure-synapse-artifacts
 
 # Upgrade Airflow database
 RUN airflow db upgrade
