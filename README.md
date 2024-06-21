@@ -14,3 +14,7 @@ POSTGRES_HOST=...
 POSTGRES_PORT=...
 AIRFLOW_PROJ_DIR=./DataInv
 ```
+2. Crear las carpetas dags, config, drivers, logs, plugins dentro del directorio DataInv
+```Bash
+mkdir dags,drivers,logs,plugins
+```

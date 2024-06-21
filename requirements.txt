@@ -3,9 +3,9 @@ apache-airflow-providers-apache-spark==4.8.1
 apache-airflow==2.9.2
 requests==2.32.3
 polars==0.20.31
-SQLAlchemy==2.0.30
+SQLAlchemy==1.4.52
 psycopg2-binary==2.9.9
-pyspark==3.4.1
+pyspark==3.5.1
 fastexcel==0.10.4
 connectorx==0.3.3
 pandas==2.2.2
