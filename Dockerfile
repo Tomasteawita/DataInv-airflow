@@ -23,5 +23,5 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --upgrade azure-synapse-artifacts
 
-# Upgrade Airflow database
-RUN airflow db upgrade
+RUN airflow db init
+RUN airflow db upgrade 
