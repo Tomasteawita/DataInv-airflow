@@ -1,6 +1,5 @@
 # DataInv-airflow
-
-Desarrollo de dags y scripts para el DataInv
+DataInv es todo un proyecto pensado para tomar mejores decisiones de inversiones en la bolsa de valores y las finanzas personales. Este es el repositorio que contiene toda la configuración y scripts de Apache Airflow para los procesos ETL necesarios para llevar datos de internet y la API de una ALyC hacia un modelo dimensional. 
 
 ## Ejecutar el proyecto
 1. Crear el archivo .env en el directorio raiz con las siguiente variables de entorno:
